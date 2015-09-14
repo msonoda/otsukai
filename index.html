@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+</head>
+
+<body>
+<header>Login</header>
+
+<div id="fb-root"></div>
+<script src="./FBOAuth.js"></script>
+<div id="fb-page"></div>
+
+
+<section class="loginform cf">
+<form name="login" action="Profile.html" method="get" accept-charset="utf-8">
+    <ul>
+        <li><label for="usermail">Email</label>
+        <input type="email" name="usermail" placeholder="yourname@email.com" required></li>
+        <li><label for="password">Password</label>
+        <input type="password" name="password" placeholder="password" required></li>
+        <li>
+        <input type="submit" value="Login"></li>
+    </ul>
+</form>
+</section>
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+
+</body>
+</html>
